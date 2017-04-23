@@ -1,10 +1,6 @@
-<!doctype html>
-<html>
-<head>
-    <link rel="stylesheet" href="../static/styles.css">
-    <title>Application Success</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block body %}
 
     <h1>Application Submission Success!</h1>
     <p> Thank you, {{ firstname }} {{ lastname }}, for applying to be a {{ position }}
@@ -12,5 +8,4 @@
         You will be hearing from us soon.
 
 
-</body>
-</html>
+{% endblock %}
