@@ -24,6 +24,7 @@ def application_form():
 
     return render_template("application-form.html", positions=POSITIONS)
 
+
 @app.route("/application-success", methods=["POST"])
 def application_success():
     """Tell applicant their application was a success and display what they submitted"""
@@ -31,7 +32,11 @@ def application_success():
     firstname = request.form.get("firstname")
     lastname = request.form.get("lastname")
     position = request.form.get("position")
-    salary = request.form.get("salary")
+    salary = float(request.form.get("salary"))
+
+    salary = "${:,.2f}".format(salary)
+    if ".00" in salary:
+        salary = salary[:-3]
 
     return render_template("application-response.html", 
                             firstname=firstname, 

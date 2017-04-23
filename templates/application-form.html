@@ -16,8 +16,8 @@
     <form action="/application-success" method="POST" id="forminput">
         First Name: <input type="text" name="firstname"><br>
         Last Name: <input type="text" name="lastname" id="lname"><br>
-        Salary Requirement: <input type="number" name="salary" min="10000" max="1000000"><br>
-        
+        Salary Requirement: <input type="number" name="salary" min="10000" max="1000000" step=".01"><br>
+
         <select name="position">
             {% for position in positions %}
             <option value="{{ position }}">{{ position }}</option>
