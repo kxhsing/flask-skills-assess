@@ -1,0 +1,41 @@
+body {
+    background-color: #f1f1f1;
+}
+
+input {
+    background-color: yellow;
+    font-family: sans-serif;
+    width: 200px;
+
+}
+
+#explanatory-text {
+    border: solid 1px black;
+    font-family: sans-serif;
+    padding: 1em;
+    text-align: center;
+
+}
+
+h1{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+a {
+    color: navy;
+
+}
+
+#forminput {
+    font-family: sans-serif;
+}
+
+#lname {
+    font-weight: bold;
+}
+

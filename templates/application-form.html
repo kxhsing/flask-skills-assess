@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Application Form</title>
+</head>
+<body>
+    <h1>Join the Team: Application</h1>
+    <p id="explanatory-text"> 
+        We have several job openings in engineering and product management at Karen Corp.<br>
+        Apply to be a part of our engineering team by submitting an application form below to be
+        considered. <br>
+        We look forward to meeting you soon!
+    </p>
+
+    <form action="/application-success" method="POST" id="forminput">
+        First Name: <input type="text" name="firstname"><br>
+        Last Name: <input type="text" name="lastname" id="lname"><br>
+        Salary Requirement: <input type="number" name="salary" min="10000" max="1000000"><br>
+        
+        <select name="position">
+            {% for position in positions %}
+            <option value="{{ position }}">{{ position }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit">
+    </form>
+
+
+
+
+
+</body>
+</html>
